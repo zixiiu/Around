@@ -9,5 +9,5 @@ jobs:
       - setup_remote_docker
       - run: |
           docker build -t faznky/around .
-          docker login -u="$faznky" -p="$Ab123456"
+          docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
           docker push faznky/around
