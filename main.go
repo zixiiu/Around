@@ -235,6 +235,7 @@ func readFromES(query elastic.Query, index string) (*elastic.SearchResult, error
 		Index(index).
 		Query(query).
 		Pretty(true).
+		Size(50).
 		Do(context.Background())
 
 	if err != nil {
